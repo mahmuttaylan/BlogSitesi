@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Blog</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/BlogProject.Web.styles.css" asp-append-version="true" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="~/stand-blog/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="~/stand-blog/assets/css/templatemo-stand-blog.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            color: black;
+            font-family: 'Cascadia Mono';
+        }
+
+        label {
+            color: darkorange;
+            font-weight: bold;
+        }
+
+        input[type=text],
+        input[type=file],
+        input[type=email],
+        textarea[type=text],
+        select[class=form-control] {
+            border-style: solid;
+            border-color: black;
+            border-width: 2px;
+        }
+
+        h5 {
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #cfe2f3;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+            footer p {
+                color: darkorange;
+            }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: #cfe2f3; /* Arka plan rengi */
+            padding: 20px 0; /* Navbar içeriği etrafındaki dolgu */
+        }
+
+        .navbar-brand {
+            color: black; /* Navbar marka metni rengi */
+            font-size: 24px; /* Navbar marka metni boyutu */
+        }
+
+        .navbar-nav {
+            margin-left: auto; /* Navbar menüsünü sağa hizalama */
+        }
+
+        .nav-item {
+            margin-left: 20px; /* Navbar öğeleri arasındaki boşluk */
+        }
+
+        .nav-link {
+            color: black !important; /* Navbar öğelerinin metin rengi */
+            font-size: 18px; /* Navbar öğelerinin metin boyutu */
+        }
+
+        .navbar-toggler {
+            border-color: #fff; /* Navbar açılır menü düğmesi rengi */
+        }
+
+        .navbar-toggler-icon {
+            background-color: #fff; /* Navbar açılır menü simgesi rengi */
+        }
+    </style>
+</head>
+<body>
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- Header -->
+    <header class="">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container justify-content-center">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                    <img src="~/images/logo.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+                    ANASAYFA
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" asp-area="Admin" asp-controller="Home" asp-action="Index">
+                                <i class='bx bxs-hard-hat'></i> Admin Paneli
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Article" asp-action="Create">
+                                <i class='bx bx-book'></i> Makale Yaz
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="User" asp-action="Profile">
+                                <i class='bx bxs-user-detail'></i> Profil Bilgilerim
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="Admin" asp-controller="Authorize" asp-action="Logout">
+                                <i class='bx bxs-user-x'></i> Çıkış Yap
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Content -->
+    <!-- Banner Starts Here -->
+    <div class="main-banner header-text">
+        <div class="container-fluid">
+            <!-- Banner Content Goes Here -->
+        </div>
+    </div>
+    <!-- Banner Ends Here -->
+
+    <div style="height:50px;"></div>
+
+    @RenderBody()
+    <footer style="background-color: #343a40; padding: 20px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="copyright-text" style="color: #ffffff; text-align: center;">
+                        <p>Copyright 2024 Designed By Mahmut Taylan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/stand-blog/vendor/jquery/jquery.min.js"></script>
+    <script src="~/stand-blog/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="~/stand-blog/assets/js/custom.js"></script>
+    <script src="~/stand-blog/assets/js/owl.js"></script>
+    <script src="~/stand-blog/assets/js/slick.js"></script>
+    <script src="~/stand-blog/assets/js/isotope.js"></script>
+    <script src="~/stand-blog/assets/js/accordions.js"></script>
+
+    <!-- jQuery and Bootstrap Bundle -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- DataTables -->
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.3/js/dataTables.buttons.min.js" crossorigin="anonymous"></script>
+    <script language="text/Javascript">
+        cleared[0] = cleared[1] = cleared[2] = 0;
+        function clearField(t) {
+            if (!cleared[t.id]) {
+                cleared[t.id] = 1;
+                t.value = '';
+                t.style.color = '#fff';
+            }
+        }
+    </script>
+
+    <!-- Additional Scripts End -->
+    <!-- Section for Page Specific Scripts -->
+    @await RenderSectionAsync("Scripts", false);
+
+</body>
+</html>

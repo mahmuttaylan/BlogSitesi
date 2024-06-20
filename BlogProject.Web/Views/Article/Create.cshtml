@@ -1,0 +1,81 @@
+﻿@model ArticleCreateVM
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <div style="height:80px;"></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card mb-4" style="background-color: #cfe2f3;">
+                <h5 class="card-header"> <i class='bx bx-book'></i> Makale Ekle </h5>
+                <form asp-controller="Article" asp-action="Create" method="post" enctype="multipart/form-data">
+                    <div class="card-body">
+
+                        <div class="form-group mb-3">
+                            <label asp-for="CategoryId"> <i class='bx bxs-category'></i> Kategori </label>
+                            <a class="btn text-danger float-end" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                                <i class='bx bxs-add-to-queue'></i> Yeni Kategori Ekle
+                            </a>
+                            <select id="categoryList" class="form-select" asp-for="CategoryId" asp-items="@(new SelectList(Model.CategoryVMs, "Id", "Name"))"></select>
+                            <div asp-validation-summary="All" style="color:red"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Title" class="form-label"> <i class='bx bxs-pencil'></i> Başlık </label>
+                            <input asp-for="Title" type="text" class="form-control" placeholder="Başlık" aria-label="Title">
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Content" class="form-label"> <i class='bx bxs-book-content'></i> İçerik </label>
+                            <textarea asp-for="Content" class="form-control" style="min-height:200px;" placeholder="İçerik" aria-label="Content"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Photo" class="form-label"> <i class='bx bxs-photo-album'></i> Resim </label>
+                            <input asp-for="Photo" type="file" accept="image/*" class="form-control" aria-label="Photo">
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-dark" style="color:darkorange"> Makaleyi Yayımla </button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"> Kategori Ekle </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="categoryName" class="form-label"> <i class='bx bxs-category'></i> Kategori İsmi </label>
+                        <input type="text" class="form-control" id="categoryName">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" style="color:darkorange" id="btnSave" data-keyboard="false"> Kaydet </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script src="~/js/categoryCreate.js"></script>
+    <script>
+        var app = app || {};
+        app.Urls = app.Urls || {};
+
+        app.Urls.baseUrl = '@Url.Content("~")';
+        app.Urls.categoryCreateUrl = "@(Url.Action("AddWithAjax", "Article"))";
+        app.Urls.articleCreateUrl = "@(Url.Action("Create", "Article"))";
+    </script>
+}

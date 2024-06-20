@@ -1,0 +1,188 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en" class="light-style customizer-hide" dir="ltr" data-theme="theme-default" data-assets-path="~/sneat/assets/" data-template="vertical-menu-template-free">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>Hakkımızda</title>
+    <meta name="description" content="Most Powerful &amp; Comprehensive Bootstrap 5 HTML Admin Dashboard Template built for developers!" />
+    <meta name="keywords" content="dashboard, bootstrap 5 dashboard, bootstrap 5 design, bootstrap 5">
+    <!-- Canonical SEO -->
+    <link rel="canonical" href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="~/sneat/assets/img/favicon/favicon.ico" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="~/sneat/assets/vendor/fonts/boxicons.css" />
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="~/sneat/assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="~/sneat/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="~/sneat/assets/css/demo.css" />
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="~/sneat/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="~/sneat/assets/vendor/css/pages/page-auth.css">
+    <!-- Helpers -->
+    <script src="~/sneat/assets/vendor/js/helpers.js"></script>
+    <script src="~/sneat/assets/js/config.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    <style>
+        .navbar-nav {
+            margin: 0 auto;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: bold;
+            border: 2px solid white;
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin: 0 10px;
+        }
+
+            .nav-link:hover {
+                color: yellow !important;
+                border-color: yellow;
+            }
+
+        .about-section {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+            .about-section h1 {
+                margin-bottom: 20px;
+            }
+
+        .divider {
+            height: 1px;
+            background-color: #ccc;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Register", "Register")">Üye Ol</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Login", "Authorize", new { area = "Admin" })">Giriş Yap</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <div class="container mt-4 d-flex justify-content-center">
+        <div class="banner">
+            <img src="~/sneat/assets/img/banner.jpg" alt="Banner" class="img-fluid" style="max-width: 1200px; height: auto;">
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="container about-section">
+        <h1>Hakkımızda</h1>
+        <p>Blog sitemize hoş geldiniz! Burada, bilgi paylaşımını ve topluluk oluşturmayı teşvik eden bir ortam sunuyoruz. Siz de bu topluluğun bir parçası olabilir, makaleler okuyabilir, kendi yazılarınızı paylaşabilir ve diğer yazarlarla etkileşimde bulunabilirsiniz.</p>
+        <h2>Neler Sunuyoruz?</h2>
+        <p><strong>Makaleler Okuma:</strong> Blog sitemizde çeşitli konularda yazılmış birçok makaleyi bulabilirsiniz. İlginizi çeken konuları keşfetmek ve bilgi edinmek için makalelerimizi okuyabilirsiniz.</p>
+        <p><strong>Üye Olma ve Makale Ekleme:</strong> Sitemize üye olarak siz de kendi makalelerinizi paylaşabilirsiniz. Kendi uzmanlık alanlarınızı ve deneyimlerinizi toplulukla paylaşmak için hemen üye olun.</p>
+        <p><strong>Makale Konusu Ekleme:</strong> Yeni makale konuları ekleyerek topluluğumuzun ilgi alanlarını genişletmeye katkıda bulunabilirsiniz. Sizin belirlediğiniz konularda diğer yazarların yazılarını görmek mümkün.</p>
+        <p><strong>En Çok Okunan 10 Makaleyi Görme:</strong> En popüler makalelerimizi kolayca bulabilirsiniz. Okuyucularımızın en çok ilgisini çeken ve en çok okunan 10 makale listesini düzenli olarak güncelliyoruz.</p>
+        <p><strong>Yazar Profillerini Görme:</strong> Makaleleri yazan kişilerin profillerine göz atabilir, yazar hakkında daha fazla bilgi edinebilirsiniz. Hangi yazarların hangi konularda uzman olduğunu öğrenmek, ilgilendiğiniz konularda daha fazla makale bulmanızı sağlar.</p>
+        <p><strong>Diğer Makalelerini Görme:</strong> İlginizi çeken bir yazarın diğer makalelerini de keşfedebilirsiniz. Böylece, sevdiğiniz yazarların tüm içeriklerine kolayca ulaşabilirsiniz.</p>
+        <h2>Neden Biz?</h2>
+        <p>Amacımız, herkesin bilgi ve deneyimlerini paylaşabileceği, öğrenebileceği ve topluluk oluşturabileceği bir platform sunmaktır. Siz de blog sitemize katılarak, hem kendinizi geliştirebilir hem de diğer insanlara ilham verebilirsiniz.</p>
+        <p>Sizleri de bu topluluğun bir parçası olmaya davet ediyoruz. Birlikte büyüyelim, öğrenelim ve paylaşalım!</p>
+        <div class="divider"></div>
+    </div>
+
+    <!-- Cards -->
+    <div class="container mt-4 d-flex justify-content-center">
+        <div class="row justify-content-center">
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img src="~/sneat/assets/img/card1.jpg" class="card-img-top" alt="Card Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Makale Nasıl Yazılır ?</h5>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img src="~/sneat/assets/img/card2.jpg" class="card-img-top" alt="Card Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Önde gelen Dergiler</h5>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img src="~/sneat/assets/img/card3.jpg" class="card-img-top" alt="Card Image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Yapay Zeka</h5>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img src="~/sneat/assets/img/card4.jpg" class="card-img-top" alt="Card Image 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Neden Yayın yapılır?</h5>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-dark text-white">
+        <div class="container">
+            <span class="text-muted">© 2024 Blog Sitemiz. Tüm hakları saklıdır.</span>
+        </div>
+    </footer>
+
+    <!-- Core JS -->
+    <script src="~/sneat/assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="~/sneat/assets/vendor/libs/popper/popper.js"></script>
+    <script src="~/sneat/assets/vendor/js/bootstrap.js"></script>
+    <script src="~/sneat/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="~/sneat/assets/vendor/js/menu.js"></script>
+    <!-- Vendors JS -->
+    <!-- Main JS -->
+    <script src="~/sneat/assets/js/main.js"></script>
+    <!-- Page JS -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+
+</html>

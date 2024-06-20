@@ -1,0 +1,60 @@
+﻿@model UserProfileVM
+
+<div class="container-xxl flex-grow-1 container-p-y">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title mb-4">Profil Bilgilerim</h5>
+                    <form asp-controller="User" asp-action="Profile" method="post" enctype="multipart/form-data">
+                        <div class="mb-3 row">
+                            <div class="col-md-4 text-center">
+                                <img src="~/images/@Model.Path" alt="user-avatar" class="d-block rounded-circle mb-3" height="150px" width="150px" id="uploadedAvatar">
+                                <label for="upload" class="btn btn-primary btn-sm">
+                                    <i class="bx bx-upload"></i> Resim Yükle
+                                    <input asp-for="Photo" type="file" accept="image/*" class="form-control d-none" id="upload" aria-describedby="uploadHelp">
+                                </label>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="mb-3">
+                                    <label asp-for="FirstName" class="form-label">İsim</label>
+                                    <input asp-for="FirstName" class="form-control" type="text">
+                                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                                </div>
+                                <div class="mb-3">
+                                    <label asp-for="LastName" class="form-label">Soyisim</label>
+                                    <input asp-for="LastName" class="form-control" type="text">
+                                    <span asp-validation-for="LastName" class="text-danger"></span>
+                                </div>
+                                <div class="mb-3">
+                                    <label asp-for="CurrentPassword" class="form-label">Mevcut Parola</label>
+                                    <input asp-for="CurrentPassword" class="form-control" type="password">
+                                    <span asp-validation-for="CurrentPassword" class="text-danger"></span>
+                                </div>
+                                <div class="mb-3">
+                                    <label asp-for="NewPassword" class="form-label">Yeni Parola (Opsiyonel)</label>
+                                    <input asp-for="NewPassword" class="form-control" type="password">
+                                    <span asp-validation-for="NewPassword" class="text-danger"></span>
+                                </div>
+                                <div class="mb-3">
+                                    <label asp-for="PhoneNumber" class="form-label">Telefon Numarası</label>
+                                    <input asp-for="PhoneNumber" class="form-control" type="text">
+                                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                </div>
+                                <div class="mb-3">
+                                    <label asp-for="About" class="form-label">Hakkında</label>
+                                    <textarea asp-for="About" class="form-control"></textarea>
+                                    <span asp-validation-for="About" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="submit" class="btn btn-primary me-md-2"> Profili Güncelle </button>
+                            <a asp-area="Admin" asp-controller="User" asp-action="Delete" asp-route-id="@Model.Id" type="submit" class="btn btn-danger"> Hesabı Sil </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
