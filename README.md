@@ -6,6 +6,16 @@ Bu proje, ASP.NET Core MVC ve Entity Framework Core kullanılarak geliştirilmi�
 
 Bu blog sitesi aşağıdaki sayfaları ve işlevleri içermektedir:
 
+# Kullanılan Teknolojiler
+
+ASP.NET Core MVC
+
+Entity Framework Core (Code First yaklaşımı ile)
+
+HTML, CSS, Javascript
+
+Bootstrap
+
 # Üyelik ve Giriş Sayfası:
 
 Kullanıcılar e-posta adresleri ile üye olabilir ve giriş yapabilirler. Kayıt işlemi mail aktivasyonu ile gerçekleştirilir.
@@ -47,27 +57,23 @@ Site hakkında genel bilgilerin bulunduğu sayfa.
 # Makale Listeleme Sayfası:
 
 Kullanıcıların yayınladığı makalelerin listelendiği sayfa.
+![](https://github.com/MahmutTaylan/BlogSitesi/blob/master/HomePage.png)
 
 # Makale Okuma Sayfası: 
 
 Kullanıcıların makaleleri okuyabileceği detay sayfası.
 
+![](https://github.com/MahmutTaylan/BlogSitesi/blob/master/MakaleDetaySayfasi.png)
+
 # Yazar Detay Sayfası:
 
 Yazarın bilgilerinin ve yazdığı makalelerin listelendiği sayfa.
-
-# Kullanılan Teknolojiler
-
-ASP.NET Core MVC
-
-Entity Framework Core (Code First yaklaşımı ile)
-
-HTML, CSS, Javascript
-
-Bootstrap
+![](https://github.com/MahmutTaylan/BlogSitesi/blob/master/KonuListesiPage.png)
 
 
 
+
+# Admin Panel Sayfalari:
 
 ![](https://github.com/MahmutTaylan/BlogSitesi/blob/master/AdminPanelEkrani.png)
 
